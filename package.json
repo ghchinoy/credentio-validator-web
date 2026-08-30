@@ -1,0 +1,19 @@
+{
+  "name": "credentio-validator-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Interactive WebAssembly C2PA Content Credentials Validator powered by Google Credentio",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.1.5.tgz"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}

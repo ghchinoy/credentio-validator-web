@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credentio Web Validator | C2PA Content Credentials</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-badge">⚡ In-Browser WebAssembly Engine</div>
+      <h1>Google Credentio C2PA Validator</h1>
+      <p class="subtitle">
+        Validate C2PA Content Credentials locally in your browser with zero network egress.
+      </p>
+    </header>
+
+    <main>
+      <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload media file to validate">
+        <div class="drop-icon">🛡️</div>
+        <div class="drop-title">Drop an image, video, audio, or PDF file here</div>
+        <div class="drop-desc">or click to browse from your device</div>
+        <input type="file" id="file-input" />
+      </div>
+
+      <div class="result-container" id="result-container">
+        <div class="result-card">
+          <div class="result-header">
+            <div>
+              <h2 id="filename-display" style="font-size: 1.1rem; font-weight: 600;">asset.jpg</h2>
+              <span id="media-type-display" style="font-size: 0.85rem; color: var(--text-muted);">image/jpeg</span>
+            </div>
+            <span class="status-badge" id="status-badge">SIGNED</span>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <span class="metric-label">Execution Time</span>
+              <span class="metric-value" id="metric-time">0.00 ms</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Engine</span>
+              <span class="metric-value" id="metric-engine">Credentio WASM</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Generator</span>
+              <span class="metric-value" id="metric-generator">—</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Signer Issuer</span>
+              <span class="metric-value" id="metric-signer">—</span>
+            </div>
+          </div>
+
+          <div class="details-section">
+            <h3 class="section-title">Manifest Assertions</h3>
+            <div class="assertion-list" id="assertion-list">
+              <!-- Assertions injected here -->
+            </div>
+
+            <h3 class="section-title" style="margin-top: 1.5rem;">Raw Provenance Report</h3>
+            <pre class="raw-json-viewer" id="raw-json">{}</pre>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Powered by <a href="https://github.com/ghchinoy/credentio-contributions" target="_blank" rel="noopener">credentio-contributions</a> & <a href="https://mediaprovenance.googlesource.com/credentio/" target="_blank" rel="noopener">Google Credentio</a>.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
