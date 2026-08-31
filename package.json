@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update-engine": "./scripts/update-engine.sh",
+    "deploy": "npm run build && npx firebase-tools deploy --only hosting"
   },
   "dependencies": {
-    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.1.7.tgz"
+    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.1.8.tgz"
   },
   "devDependencies": {
     "typescript": "^5.7.0",
