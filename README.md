@@ -63,6 +63,20 @@ The static output is generated in `dist/`.
 
 ---
 
+## Updating the WebAssembly Engine
+
+To re-vendor the latest WebAssembly binaries and TypeScript SDK from the parent repository or GitHub Releases:
+
+```bash
+# Sourcing from local SDK build:
+./scripts/update-engine.sh
+
+# Or downloading from a specific GitHub Release tag:
+./scripts/update-engine.sh --release v0.1.7
+```
+
+---
+
 ## Deploying to Firebase Hosting
 
 This project is configured for Google Firebase Hosting. Anyone can deploy their own instance:

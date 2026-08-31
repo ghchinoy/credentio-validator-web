@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "credentio-validator",
     "public": "dist",
     "ignore": [
       "firebase.json",

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.1.5.tgz"
+    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.1.7.tgz"
   },
   "devDependencies": {
     "typescript": "^5.7.0",
