@@ -12,7 +12,7 @@
     "deploy": "npm run build && npx firebase-tools deploy --only hosting"
   },
   "dependencies": {
-    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.2.0.tgz"
+    "@ghchinoy/credentio-wasm": "file:./vendor/ghchinoy-credentio-wasm-0.2.1.tgz"
   },
   "devDependencies": {
     "typescript": "^5.7.0",
